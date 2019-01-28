@@ -1,0 +1,16 @@
+{
+  "name": "laybetcalc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "laybetcalc",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harm te Molder",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "handlebars": "^4.0.12"
+  }
+}

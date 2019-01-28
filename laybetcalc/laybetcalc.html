@@ -1,0 +1,20 @@
+<html>
+<body>
+  <form action="/" method="post">
+    <h2>Bookmaker</h2>
+    Odds: <input type="number" step="0.01" name="bookmakerOdds" {{#if bookmakerOdds}}value="{{bookmakerOdds}}"{{/if}} /><br />
+    Stake: <input type="number" step="0.01" name="bookmakerStake" {{#if bookmakerStake}}value="{{bookmakerStake}}"{{/if}} /><br />
+    <input type="checkbox" name="bookmakerPromotion" value="free bet" {{#equals bookmakerPromotion "free bet"}}checked{{/equals}} />This is a free bet*
+    <h2>Exchange</h2>
+    Odds: <input type="number" step="0.01" name="exchangeOdds" {{#if exchangeOdds}}value="{{exchangeOdds}}"{{/if}} /><br />
+    Stake: <input type="number" step="0.01" name="exchangeStake" disabled="disabled" {{#if exchangeStake}}value="{{exchangeStake}}"{{/if}} /><br />
+    Winning commission**: <input type="number" step="0.01" name="exchangeCommission" {{#if exchangeCommission}}value="{{exchangeCommission}}"{{else}}value="6.5"{{/if}} />%<br />
+    <input type="checkbox" name="exchangePromotion" value="free bet" disabled="disabled" {{#equals exchangePromotion "free bet"}}checked{{/equals}} />This is a free bet*<br />
+    <input type="submit" value="Calculate" />
+  </form>
+  <ul style="list-style-type: none;">
+    <li>* A free bet is a bonus bet where the winnings are returned, but the stake isn't.</li>
+    <li>** An exchange (e.g. Betfair) keeps this percentage of your winnings as commission.</li>
+  </ul>
+</body>
+</html>
